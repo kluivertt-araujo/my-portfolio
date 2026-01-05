@@ -1,5 +1,11 @@
 # Welcome to your Lovable project
 
+# Atualizar o git pages
+
+npm run dev # testar localmente
+npm run build # gerar build
+npm run deploy # enviar para GitHub Pages
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
