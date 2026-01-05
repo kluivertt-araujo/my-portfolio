@@ -57,7 +57,7 @@ const Navbar = () => {
             </motion.a>
           ))}
           <Button size="sm" variant="outline" asChild>
-            <a href="/resume.pdf" target="_blank">
+            <a href="/my-portfolio/Kluivertt_Araujo.pdf" target="_blank">
               Currículo
             </a>
           </Button>
@@ -68,7 +68,11 @@ const Navbar = () => {
           className="md:hidden text-foreground"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isMobileMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
         </button>
 
         {/* Mobile Menu */}
@@ -93,7 +97,8 @@ const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-muted-foreground hover:text-primary transition-colors font-mono"
                 >
-                  <span className="text-primary">0{index + 1}.</span> {item.name}
+                  <span className="text-primary">0{index + 1}.</span>{" "}
+                  {item.name}
                 </a>
               ))}
               <Button variant="outline" asChild className="mt-4">

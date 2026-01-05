@@ -112,13 +112,17 @@ const Hero = () => {
             }}
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
-            <Button size="lg" className="glow">
-              <Mail className="mr-2 h-4 w-4" />
-              Entre em Contato
-            </Button>
-            <Button variant="outline" size="lg">
-              Ver Projetos
-            </Button>
+            <a href="/my-portfolio#contact">
+              <Button size="lg" className="glow">
+                <Mail className="mr-2 h-4 w-4" />
+                Entre em Contato
+              </Button>
+            </a>
+            <a href="/my-portfolio#projects">
+              <Button variant="outline" size="lg">
+                Ver Projetos
+              </Button>
+            </a>
           </motion.div>
 
           <motion.div
@@ -134,7 +138,7 @@ const Hero = () => {
             className="flex justify-center gap-6"
           >
             <a
-              href="https://github.com"
+              href="https://github.com/kluivertt-araujo"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-300"
@@ -142,7 +146,7 @@ const Hero = () => {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/kluivertt-ara%C3%BAjo-98629987/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-300"

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -60,6 +60,18 @@ const Contact = () => {
             >
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-primary/10 rounded-lg">
+                  <Phone className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Telefone</p>
+                  <a className="text-foreground hover:text-primary transition-colors">
+                    +55 (11) 94757-0893
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-primary/10 rounded-lg">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -82,64 +94,18 @@ const Contact = () => {
                   <p className="text-foreground">São Paulo, Brasil</p>
                 </div>
               </div>
-
-              <div className="pt-4">
-                <p className="text-muted-foreground mb-4">
-                  Disponível para projetos freelance e oportunidades full-time.
-                </p>
-                <Button size="lg" className="glow" asChild>
-                  <a href="mailto:kluiverttaraujo@outlook.com">
-                    <Mail className="mr-2 h-4 w-4" />
-                    Enviar Email
-                  </a>
-                </Button>
-              </div>
             </motion.div>
-
-            {/* Contact Form */}
-            <motion.form
-              initial={{
-                opacity: 0,
-                x: 20,
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                delay: 0.3,
-              }}
-              className="space-y-4 text-left"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <div>
-                <Input
-                  placeholder="Seu nome"
-                  className="bg-card border-border focus:border-primary"
-                />
-              </div>
-              <div>
-                <Input
-                  type="email"
-                  placeholder="Seu email"
-                  className="bg-card border-border focus:border-primary"
-                />
-              </div>
-              <div>
-                <Textarea
-                  placeholder="Sua mensagem"
-                  rows={5}
-                  className="bg-card border-border focus:border-primary resize-none"
-                />
-              </div>
-              <Button type="submit" className="w-full">
-                <Send className="mr-2 h-4 w-4" />
-                Enviar Mensagem
+            <div className="pt-4">
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12">
+                Disponível para projetos freelance e oportunidades full-time.
+              </p>
+              <Button size="lg" className="glow" asChild>
+                <a href="mailto:kluiverttaraujo@outlook.com">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Enviar Email
+                </a>
               </Button>
-            </motion.form>
+            </div>
           </div>
         </motion.div>
       </div>
