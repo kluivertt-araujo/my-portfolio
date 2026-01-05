@@ -1,17 +1,19 @@
 import { motion } from "framer-motion";
 import { Code2, Briefcase, GraduationCap } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="about" className="py-24 bg-background">
+  return <section id="about" className="py-24 bg-background">
       <div className="container px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6
+      }} className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             <span className="text-primary font-mono text-lg md:text-xl">01.</span>{" "}
             Sobre Mim
@@ -41,13 +43,17 @@ const About = () => {
             </div>
 
             <div className="space-y-6">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-gradient-card p-6 rounded-lg border border-border hover:border-primary/50 transition-colors duration-300"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: 20
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              delay: 0.2
+            }} className="bg-gradient-card p-6 rounded-lg border border-border hover:border-primary/50 transition-colors duration-300">
                 <div className="flex items-center gap-4 mb-3">
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <Code2 className="h-6 w-6 text-primary" />
@@ -59,13 +65,17 @@ const About = () => {
                 </p>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="bg-gradient-card p-6 rounded-lg border border-border hover:border-primary/50 transition-colors duration-300"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: 20
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              delay: 0.3
+            }} className="bg-gradient-card p-6 rounded-lg border border-border hover:border-primary/50 transition-colors duration-300">
                 <div className="flex items-center gap-4 mb-3">
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <Briefcase className="h-6 w-6 text-primary" />
@@ -77,29 +87,29 @@ const About = () => {
                 </p>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-                className="bg-gradient-card p-6 rounded-lg border border-border hover:border-primary/50 transition-colors duration-300"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: 20
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              delay: 0.4
+            }} className="bg-gradient-card p-6 rounded-lg border border-border hover:border-primary/50 transition-colors duration-300">
                 <div className="flex items-center gap-4 mb-3">
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <GraduationCap className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-lg">Bacharel em SI</h3>
                 </div>
-                <p className="text-muted-foreground text-sm">
-                  Sistemas de Informação - Universidade
-                </p>
+                <p className="text-muted-foreground text-sm">Engenharia de Software- Universidade</p>
               </motion.div>
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
