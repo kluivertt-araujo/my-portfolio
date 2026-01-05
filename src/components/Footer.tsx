@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
 const Footer = () => {
-  return <footer className="py-8 border-t border-border bg-background">
+  return (
+    <footer className="py-8 border-t border-border bg-background">
       <div className="container px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
@@ -10,22 +11,36 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="https://linkedin.com"
+              target="https://www.linkedin.com/in/kluivertt-ara%C3%BAjo-98629987/"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="mailto:lucas.silva@email.com" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="mailto:kluiverttaraujo@outlook.com"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               <Mail className="w-5 h-5" />
             </a>
           </div>
 
           <p className="text-muted-foreground text-sm font-mono">
-            © {new Date().getFullYear()} Lucas Silva
+            © {new Date().getFullYear()} Kluivertt Araujo
           </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 export default Footer;
