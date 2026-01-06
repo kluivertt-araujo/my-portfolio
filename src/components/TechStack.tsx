@@ -1,3 +1,4 @@
+import { useLanguage } from "@/hooks/use-language";
 import { motion } from "framer-motion";
 
 const technologies = [
@@ -79,6 +80,7 @@ const item = {
 };
 
 const TechStack = () => {
+  const { lang } = useLanguage();
   return (
     <section id="skills" className="py-24 bg-secondary/30">
       <div className="container px-6">
@@ -90,11 +92,15 @@ const TechStack = () => {
           className="max-w-5xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
-            <span className="text-primary font-mono text-lg md:text-xl">02.</span>{" "}
-            Tecnologias
+            <span className="text-primary font-mono text-lg md:text-xl">
+              02.
+            </span>{" "}
+            {lang === "pt" ? "Tecnologias" : "Technologies"}
           </h2>
           <p className="text-muted-foreground text-center mb-4">
-            Ferramentas que utilizo no dia a dia
+            {lang === "pt"
+              ? "Ferramentas que utilizo no dia a dia"
+              : "Tools I use on a daily basis"}
           </p>
           <div className="w-20 h-1 bg-primary mx-auto mb-12 rounded-full" />
 
@@ -120,8 +126,12 @@ const TechStack = () => {
                   />
                 </div>
                 <div className="text-center">
-                  <p className="text-sm font-medium text-foreground">{tech.name}</p>
-                  <p className="text-xs text-muted-foreground">{tech.category}</p>
+                  <p className="text-sm font-medium text-foreground">
+                    {tech.name}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {tech.category}
+                  </p>
                 </div>
               </motion.div>
             ))}

@@ -1,18 +1,22 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { useLanguage } from "@/hooks/use-language";
+
 const Footer = () => {
+  const { lang } = useLanguage();
+
   return (
     <footer className="py-8 border-t border-border bg-background">
       <div className="container px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
-            <span>Feito com</span>
+            <span>{lang === "pt" ? "Feito com" : "Built with"}</span>
             <Heart className="w-4 h-4 text-primary fill-primary" />
-            <span>por Kluivertt</span>
+            <span>{lang === "pt" ? "por Kluivertt" : "by Kluivertt"}</span>
           </div>
 
           <div className="flex items-center gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/kluivertt-araujo"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -20,8 +24,8 @@ const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com"
-              target="https://www.linkedin.com/in/kluivertt-ara%C3%BAjo-98629987/"
+              href="https://www.linkedin.com/in/kluivertt-araujo/"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
@@ -43,4 +47,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;
