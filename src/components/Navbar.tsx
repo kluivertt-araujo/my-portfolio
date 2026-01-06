@@ -2,17 +2,29 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/use-language";
 
-const navItems = [
+const navItemsPt = [
   { name: "Sobre", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projetos", href: "#projects" },
   { name: "Contato", href: "#contact" },
 ];
 
+const navItemsEn = [
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
+
 const Navbar = () => {
+  const { lang } = useLanguage(); // Pegando o idioma global
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Define qual lista usar baseada no idioma
+  const navItems = lang === "pt" ? navItemsPt : navItemsEn;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +51,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold text-gradient"
         >
-          LS
+          KA {/* Mudei para suas iniciais Kluivertt Araujo */}
         </motion.a>
 
         {/* Desktop Navigation */}
@@ -58,7 +70,7 @@ const Navbar = () => {
           ))}
           <Button size="sm" variant="outline" asChild>
             <a href="/my-portfolio/Kluivertt_Araujo.pdf" target="_blank">
-              Currículo
+              {lang === "pt" ? "Currículo" : "Resume"}
             </a>
           </Button>
         </div>
@@ -102,8 +114,8 @@ const Navbar = () => {
                 </a>
               ))}
               <Button variant="outline" asChild className="mt-4">
-                <a href="/resume.pdf" target="_blank">
-                  Currículo
+                <a href="/my-portfolio/Kluivertt_Araujo.pdf" target="_blank">
+                  {lang === "pt" ? "Currículo" : "Resume"}
                 </a>
               </Button>
             </div>
