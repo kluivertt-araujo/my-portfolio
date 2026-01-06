@@ -2,11 +2,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/use-language";
 
 const Hero = () => {
-  const [lang, setLang] = useState<"pt" | "en">("pt"); // idioma atual
-
-  const toggleLang = () => setLang(lang === "pt" ? "en" : "pt");
+  const { lang, toggleLang } = useLanguage();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
